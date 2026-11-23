@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+body { margin: 0; }
+.page-layout { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 28px; padding: 48px 16px 64px; }
+.weather-card { background: #0f172a; border: 1px solid #334155; border-radius: 14px; padding: 20px; max-width: 390px; }
+.contact-panel { width: 100%; max-width: 680px; background: #0f172a; border: 1px solid #334155; border-radius: 14px; overflow: hidden; }
+.contact-form { padding: 24px; display: flex; flex-direction: column; gap: 15px; }
+.contact-form h2 { color: #38bdf8; font-size: 21px; font-weight: 700; text-align: center; margin: 0; }
+.contact-intro { font-size: 13px; text-align: center; color: #94a3b8; margin: 0 0 6px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 14px; font-weight: 600; color: #e2e8f0; }
+.field input, .field textarea { display: block; width: 100%; border: 1px solid #475569; border-radius: 8px; background: #1e293b; padding: 10px 12px; color: white; font: inherit; }
+.field input:focus, .field textarea:focus { outline: 2px solid #38bdf8; outline-offset: 1px; }
+.field [aria-invalid="true"] { border-color: #f87171; }
+.field-error { font-size: 13px; color: #fca5a5; margin: 0; }
+.success-message { color: #6ee7b7; font-size: 13px; margin: 0; }
+.primary-button, .secondary-button { background: #0284c7; padding: 11px 15px; border-radius: 8px; font-size: 14px; font-weight: 700; color: #fff; border: 0; cursor: pointer; }
+.primary-button:hover, .secondary-button:hover { background: #0369a1; }
+.primary-button:disabled, .secondary-button:disabled { opacity: 0.65; cursor: wait; }
+.contact-results { border-top: 1px solid #334155; padding: 24px; }
+.results-heading { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+.results-heading h3 { margin: 0 0 4px; font-size: 18px; font-weight: 700; color: #f8fafc; }
+.results-heading p { font-size: 12px; color: #94a3b8; margin: 0; }
+.results-heading code { color: #7dd3fc; }
+.empty-note { color: #94a3b8; font-size: 13px; margin: 18px 0 0; }
+.contact-list { list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 20px 0 0; max-height: 430px; overflow-y: auto; }
+.contact-item { border: 1px solid #334155; border-radius: 9px; background: #1e293b; padding: 14px; }
+.contact-item-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.contact-item-head time { color: #94a3b8; font-size: 11px; }
+.contact-email { color: #7dd3fc; font-size: 13px; overflow-wrap: anywhere; }
+.contact-message { color: #e2e8f0; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; margin: 9px 0 0; }
+@media (max-width: 600px) { .page-layout { padding-top: 22px; } .contact-form, .contact-results { padding: 16px; } .weather-card { padding: 14px; } .secondary-button { width: 100%; } }
+
+/* Búsqueda de contactos mediante GraphQL */
+.search-form { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
+.search-form > label { font-size: 13px; color: #cbd5e1; font-weight: 600; }
+.search-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.search-row select, .search-row input { background: #1e293b; border: 1px solid #475569; border-radius: 8px; color: white; font: inherit; padding: 10px 12px; min-width: 0; }
+.search-row input { flex: 1; min-width: 155px; }
+.search-row select:focus, .search-row input:focus { outline: 2px solid #38bdf8; outline-offset: 1px; }
+.search-summary { color: #94a3b8; font-size: 12px; margin: 14px 0 0; }
+@media (max-width: 600px) { .search-row { flex-direction: column; } .search-row input, .search-row select, .search-row button { width: 100%; } }
