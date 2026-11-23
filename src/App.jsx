@@ -1,5 +1,6 @@
 import { useState } from "react";
 import WeatherCard from "./components/WeatherCard";
+import ContactForm from "./components/ContactForm";
 import { fetchCurrentWeather } from "./services/weatherApi";
 import { useWeatherSocket } from "./hooks/useWeatherSocket";
 import "./styles/global.css";
@@ -29,6 +30,7 @@ export default function App() {
         onFetchWeather={handleFetchWeather}
         live={live}
       />
+          <ContactForm />
     </main>
   );
 }
